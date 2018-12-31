@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Prevent Pointer Focus Demo</title>
+  <meta charSet="UTF-8" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,minimum-scale=1,maximum-scale=1" />
+  <style>
+    :focus {
+      outline: 3px solid red;
+      outline-offset: 0;
+    }
+    .pressed {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <input id="checkbox" type="checkbox" />
+    <label for="checkbox">Checkbox</label>
+  </p>
+
+  <p>
+    <input id="radio1" type="radio" name="radio" value="1" />
+    <label for="radio1">Radio 1</label>
+    <br />
+    <input id="radio2" type="radio" name="radio" value="2" />
+    <label for="radio2">Radio 2</label>
+  </p>
+
+  <p>
+    <button>Button</button>
+    <button><span>Button</span></button>
+  </p>
+
+  <p>
+    <input type="text" />
+  </p>
+
+  <p>
+    <select name="select">
+      <option selected="" disabled="" value="">Select</option>
+      <option value="a">Option 1</option>
+      <option value="b">Option 2</option>
+    </select>
+  </p>
+
+  <p>
+    <select multiple="">
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </select>
+  </p>
+
+  <p>
+    <input type="range" min="1" max="5" value="3" />
+  </p>
+
+  <p>
+    <input type="file" />
+  </p>
+
+  <p>
+    <input type="color" value="#ffff00" />
+  </p>
+
+  <p>
+    <a href="#">Link</a>
+  </p>
+
+  <p>
+    <div tabindex="0">tabindex="0"</div>
+    <div tabindex="-1">tabindex="-1"</div>
+  </p>
+</body>
+
+</html>

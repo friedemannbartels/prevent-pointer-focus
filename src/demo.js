@@ -1,0 +1,3 @@
+import preventPointerFocus from './'
+
+preventPointerFocus()
