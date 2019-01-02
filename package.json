@@ -19,19 +19,17 @@
     "url": "https://github.com/friedemannbartels/prevent-pointer-focus/issues"
   },
   "homepage": "https://github.com/friedemannbartels/prevent-pointer-focus#readme",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-minify-webpack-plugin": "^0.3.1",
+    "eslint": "^5.11.1",
     "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
-    "webpack": "^4.28.3"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.11.1",
+    "webpack": "^4.28.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"
   }
