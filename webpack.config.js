@@ -11,7 +11,7 @@ const config = {
   output: {
     filename: '[name].min.js',
     path: path.join(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '',
     libraryTarget: 'umd'
   },
 
