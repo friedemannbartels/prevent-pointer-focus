@@ -9,7 +9,7 @@ const preventPointerFocus = () => {
     const target = event.target
     if (target.tagName === 'SELECT') {
       if (target.getAttribute('multiple') === null) {
-        if ((isChrome || isSafari) && !isTouch) {
+        if ((isChrome || isSafari) && !isTouch && document.activeElement !== target) {
           blurOnFocus(target)
           return
         }
