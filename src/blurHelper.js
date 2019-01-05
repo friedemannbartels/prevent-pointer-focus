@@ -62,7 +62,14 @@ export const blurOnFocus = (element, label) => {
         element.blur()
         focusNext(element)
       }],
-      ['mouseup', document, event => event.target !== label],
+      ['mouseup', document, event => {
+        let mouseupTarget = event.target
+        while (mouseupTarget !== label && mouseupTarget !== document.body) {
+          mouseupTarget = mouseupTarget.parentNode
+        }
+
+        return mouseupTarget !== label
+      }],
       ['keydown', document]
     ])
 
