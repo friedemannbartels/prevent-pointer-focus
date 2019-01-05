@@ -1,6 +1,13 @@
 const MinifyPlugin = require('babel-minify-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 const path = require('path')
+
+const license = `/** @license prevent-pointer-focus
+* Copyright (c) Friedemann Bartels
+*
+* This source code is licensed under the MIT license.
+*/`
 
 const config = {
   entry: {
@@ -30,6 +37,10 @@ const config = {
     new HtmlWebpackPlugin({
       template: 'src/demo.html',
       excludeChunks: ['prevent-pointer-focus']
+    }),
+    new webpack.BannerPlugin({
+      banner: license,
+      raw: true
     })
   ]
 }
