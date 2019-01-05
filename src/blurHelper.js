@@ -1,7 +1,28 @@
 import addOnetimeEventListeners from './addOnetimeEventListeners'
 
+const focusableElements = ['SELECT', 'INPUT', 'LABEL', 'OPTION', 'BUTTON', 'A']
+
+const getFocusElement = (element) => {
+  while (focusableElements.includes(element.tagName)) {
+    if (element.nextElementSibling) {
+      element = element.nextElementSibling
+    } else {
+      while (element !== document.body && !element.parentNode.nextElementSibling) {
+        element = element.parentNode
+      }
+
+      if (element.parentNode.nextElementSibling) {
+        element = element.parentNode.nextElementSibling
+      }
+    }
+  }
+
+  return element
+}
+
 const focusNext = (element) => {
-  const focusElement = element.parentNode.nextElementSibling
+  const focusElement = getFocusElement(element)
+
   const focus = () => {
     focusElement.removeEventListener('focus', focus)
     focusElement.classList.add('pressed')
